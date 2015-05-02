@@ -1,0 +1,31 @@
+#bloc-droit {
+	position: fixed;
+	width: 10%;
+	height: 10%;
+	right:0px;
+	top: 1.5%;
+}
+
+#header-bar {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  font-size: 36px;
+  line-height: 150%;
+  background-color: navy;
+  color: white;
+}
+
+#content {
+  margin: 5% 0%;
+}
+  
+#header input{
+	background-color: white;
+	padding-top: 1%;
+	padding-right: 1%;
+	padding-bottom: 1%;
+	padding-left: 1%;	
+}
+

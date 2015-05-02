@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
 <body>
-<div style="width:100%;font-size:36px;line-height:48px;background-color:navy;color:white">My Facelet Application</div>
+	<div id="header-bar">Quentin Chéreau</div>
+	<div id="bloc-droit">
+		<h:form>
+			<h:commandButton value="submit"
+				image="resources/pictures/fr-flag.png" alt="versionFrançaise"
+				immediate="true">
+				<f:setPropertyActionListener target="#{localeHandler.locale}"
+					value="fr" />
+			</h:commandButton>
+			<p:spacer width="5%"/>
+			<h:commandButton value="submit"
+				image="resources/pictures/uk-flag.png" alt="english version"
+				immediate="true">
+				<f:setPropertyActionListener target="#{localeHandler.locale}"
+					value="en" />
+			</h:commandButton>			
+		</h:form>
+	</div>
 </body>
 </html>

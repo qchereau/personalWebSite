@@ -1,0 +1,23 @@
+#bloc-droit {
+	position: absolute;
+	width: 10%;
+	height: 10%;
+	right:0px;
+	top: 1.5%;
+}
+
+#header-bar {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  font-size: 36px;
+  line-height: 150%;
+  background-color: navy;
+  color: white;
+}
+
+#content {
+  margin: 5% 0%;
+}
+  
