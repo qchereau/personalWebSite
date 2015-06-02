@@ -10,6 +10,12 @@
 			<h:outputText value="#{localeHandler.translate(view.viewId)}" />
 		</ui:insert></title>
 	<link type="text/css" rel="stylesheet" href="resources/css/style.css" />
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+    $( document ).ready(function() {
+        console.log( "document loaded" );
+    });
+    </script>
 </h:head>
 
 <h:body>
@@ -17,6 +23,14 @@
 		<ui:insert name="header">
 			<ui:include src="/WEB-INF/templates/header.xhtml" />
 		</ui:insert>
+	</div>
+
+	<div class="leftPanel surroundedDiv">
+		<h:form id="leftPanel">
+			<h:commandButton action="#{cVBean.returnCV}" id="cVbutton"
+				class="contactButton" />
+		panneau de gauche
+		</h:form>
 	</div>
 
 	<div id="content">

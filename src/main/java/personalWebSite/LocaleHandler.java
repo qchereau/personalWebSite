@@ -11,6 +11,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
+import util.PrimefacesUtil;
+
 @ManagedBean(name="localeHandler")
 @SessionScoped
 public class LocaleHandler {
@@ -48,5 +50,6 @@ public class LocaleHandler {
 	public void setLocale(String locale){
 		browserLocale = new Locale(locale);
 		init();
+		PrimefacesUtil.displayMessage(translate("languageChanged"));
 	}
 }

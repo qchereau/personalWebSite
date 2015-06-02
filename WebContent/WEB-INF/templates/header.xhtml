@@ -7,22 +7,21 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <body>
-	<div id="header-bar">Quentin Chéreau</div>
+	<div id="header-bar" class="surroundedDiv">QChéreau</div>
 	<div id="bloc-droit">
+		<p:growl id="growl" life="2000" />
 		<h:form>
-			<h:commandButton value="submit"
-				image="resources/pictures/fr-flag.png" alt="versionFrançaise"
-				immediate="true">
+			<p:commandButton id="iconFr" update="growl" 
+			icon="frenchFlag" title="version française" styleClass="ui-icon-square">
 				<f:setPropertyActionListener target="#{localeHandler.locale}"
-					value="fr" />
-			</h:commandButton>
+					value="fr" />			
+			</p:commandButton>
 			<p:spacer width="5%"/>
-			<h:commandButton value="submit"
-				image="resources/pictures/uk-flag.png" alt="english version"
-				immediate="true">
+			<p:commandButton id="iconUk" update="growl" 
+			icon="englishFlag" title="english version" styleClass="ui-icon-square">
 				<f:setPropertyActionListener target="#{localeHandler.locale}"
 					value="en" />
-			</h:commandButton>			
+			</p:commandButton>
 		</h:form>
 	</div>
 </body>
